@@ -1,11 +1,11 @@
-.categories {
-  padding: 20px 40px;
-}
-
 .categories h2 {
   font-size: 28px;
   margin-bottom: 20px;
   padding-left: 2rem;
+}
+
+.categories {
+  padding: 20px 40px;
 }
 
 .grid {

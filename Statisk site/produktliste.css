@@ -1,7 +1,7 @@
 main {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 290px));
-  gap: 20px; /* afstand mellem kortene */
+  gap: 20px;
   padding: 20px;
   justify-content: center; /* centrer selve grid’et vandret i main */
   justify-items: center; /* centrer hvert kort inde i sin kolonne */
@@ -15,7 +15,7 @@ h2 {
 
 .sportprodukt {
   position: relative;
-  background-color: #2b2b2b; /* eksempel, tilpas selv */
+  background-color: #2b2b2b;
   color: #fff;
   padding: 10px;
   border-radius: 8px;
