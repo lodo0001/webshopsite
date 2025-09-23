@@ -1,0 +1,95 @@
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    "image purchase"
+    "info  info";
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+main > img {
+  grid-area: image;
+  width: 100%;
+  height: auto;
+}
+
+.purchaseBox {
+  grid-area: purchase;
+  background: #d5bcd5;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.purchaseBox h3 {
+  font-size: 3rem;
+}
+
+.purchaseBox p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.info {
+  grid-area: info;
+  color: #282828;
+  padding: 2rem 0;
+}
+
+.info h2 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.purchaseBox h3 {
+  margin-top: 0;
+}
+
+button {
+  background: #444;
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #666;
+}
+
+dl {
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+.breadcrumbs {
+  list-style: none;
+  text-decoration: none;
+  display: flex;
+  gap: 0.5rem;
+  padding-top: 4em;
+  padding-left: 6em;
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.breadcrumbs li {
+  position: relative;
+}
+
+.breadcrumbs li + li::before {
+  content: "›";
+  margin: 0 0.5rem;
+  color: #393939;
+}
+
+.form {
+  padding-top: 5rem;
+}
