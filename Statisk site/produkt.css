@@ -10,17 +10,13 @@ main {
   padding: 2rem;
 }
 
-main > img {
+main > figure {
   grid-area: image;
-  width: 100%;
-  height: auto;
 }
 
-.purchaseBox {
-  grid-area: purchase;
-  background: #d5bcd5;
-  padding: 2rem;
-  border-radius: 8px;
+main > figure > img {
+  width: 100%;
+  height: auto;
 }
 
 .purchaseBox h3 {
@@ -40,17 +36,13 @@ main > img {
 }
 
 .info h2 {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 
-.purchaseBox h3 {
-  margin-top: 0;
-}
-
 button {
-  background: #444;
-  color: #fff;
+  background: #ad75a1;
+  color: #000000;
   padding: 0.8rem 1.2rem;
   border: none;
   border-radius: 6px;
@@ -58,11 +50,10 @@ button {
 }
 
 button:hover {
-  background: #666;
+  background: #bb85b4;
 }
 
 dl {
-  font-size: 1.5rem;
   line-height: 1.6;
 }
 
@@ -91,5 +82,5 @@ dl {
 }
 
 .form {
-  padding-top: 5rem;
+  padding-top: 2rem;
 }
