@@ -63,6 +63,11 @@
   font-weight: bold;
 }
 
+dt {
+  font-size: large;
+  font-weight: bold;
+}
+
 dl {
   line-height: 1.6;
 }

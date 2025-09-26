@@ -25,7 +25,7 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
       />
       <section class="purchaseBox">
         <h3>${product.productdisplayname}</h3>
-        <p>${product.brandname}</p>
+        <br/>
         <h4>Price: <span>DKK ${product.price},-</span></h4>
         <p>Color: <span>${product.basecolour}</span></p>
         <p>Gender: <span>${product.gender}</span></p>
@@ -50,6 +50,7 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
         <dt>Product information:</dt>
         <dd>${product.description}</dd>
       </dl>
+      <br/>
       <h1>${product.brandname}</h1>
       <p>${product.brandbio}</p>
     </section>
