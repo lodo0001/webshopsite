@@ -1,38 +1,61 @@
-main {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-areas:
-    "image purchase"
-    "info  info";
+.breadcrumbs {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+  padding-top: 2rem;
+  padding-left: 9;
+  margin-bottom: 2rem;
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.breadcrumbs li + li::before {
+  content: "›";
+  margin: 0 0.5rem;
+  color: #393939;
+}
+
+.productMain {
+  display: flex;
   gap: 2rem;
+  flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 1rem;
 }
 
-main > figure {
-  grid-area: image;
-}
-
-main > figure > img {
+.productbillede {
+  flex: 1;
+  max-width: 500px;
   width: 100%;
   height: auto;
 }
 
+.purchaseBox {
+  flex: 0 0 300px;
+  padding: 1rem;
+}
+
 .purchaseBox h3 {
-  font-size: 3rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .purchaseBox p {
   font-size: 1rem;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
+  margin: 0.5rem 0;
 }
 
 .info {
-  grid-area: info;
   color: #282828;
   padding: 2rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .info h2 {
@@ -40,6 +63,11 @@ main > figure > img {
   font-weight: bold;
 }
 
+dl {
+  line-height: 1.6;
+}
+
+/* Buttons */
 button {
   background: #ad75a1;
   color: #000000;
@@ -53,34 +81,17 @@ button:hover {
   background: #bb85b4;
 }
 
-dl {
-  line-height: 1.6;
-}
-
-.breadcrumbs {
-  list-style: none;
-  text-decoration: none;
-  display: flex;
-  gap: 0.5rem;
-  padding-top: 4em;
-  padding-left: 6em;
-}
-
-.breadcrumbs a {
-  text-decoration: none;
-  color: #000000;
-}
-
-.breadcrumbs li {
-  position: relative;
-}
-
-.breadcrumbs li + li::before {
-  content: "›";
-  margin: 0 0.5rem;
-  color: #393939;
-}
-
 .form {
   padding-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .productMain {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .purchaseBox {
+    width: 100%;
+  }
 }

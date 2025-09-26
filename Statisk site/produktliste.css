@@ -1,10 +1,14 @@
 main {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 290px));
-  gap: 20px;
   padding: 20px;
-  justify-content: center; /* centrer selve grid’et vandret i main */
-  justify-items: center; /* centrer hvert kort inde i sin kolonne */
+}
+
+.productContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 h2 {
@@ -13,20 +17,29 @@ h2 {
   margin-top: 3rem;
 }
 
-.sportprodukt {
+.produkter {
   position: relative;
   background-color: #2b2b2b;
   color: #fff;
   padding: 10px;
   border-radius: 8px;
-  align-items: center;
+  width: 100%;
+  max-width: 290px;
+  box-sizing: border-box;
+  cursor: pointer;
 }
 
-.sportprodukt a {
-  color: rgb(255, 255, 255);
+.produkter a {
+  color: #fff;
 }
 
-.sportprodukt.soldout .label {
+.produkter .readmore {
+  position: relative;
+  color: #fff;
+  text-decoration: underline;
+}
+
+.produkter.soldout .label {
   position: absolute;
   top: 10px;
   left: 10px;
@@ -37,25 +50,29 @@ h2 {
   border-radius: 4px;
 }
 
-.sportprodukt.soldout img {
+.produkter.soldout img {
   opacity: 0.5;
   filter: grayscale(80%);
 }
 
 .discounted .badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
   background: red;
   color: #fff;
-  padding: 0.5rem 0.6rem;
+  font-size: 0.75rem;
+  padding: 0.5rem 0.8rem;
   border-radius: 4px;
   font-weight: bold;
-  margin-left: 0.5rem;
 }
 
 .discounted p {
   display: inline-block;
 }
 
-main img {
+.productContainer img {
   height: 360px;
   width: auto;
   display: block;
