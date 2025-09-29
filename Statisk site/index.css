@@ -7,7 +7,7 @@
   padding: 20px 40px;
 }
 
-.grid {
+.categorylist {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
