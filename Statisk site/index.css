@@ -1,37 +1,36 @@
-.categories h1 {
+h1 {
   text-align: center;
   padding-bottom: 2rem;
-}
-
-.categories {
-  padding: 20px 40px;
 }
 
 .categorylist {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  justify-content: center;
+  gap: 5rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+  padding: 0 2rem;
 }
 
-.card {
-  background-color: #bc87ba;
-  font-size: 25px;
+.categorylist a {
+  background-color: #9a3a8892;
+  color: #ffffff;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 120px;
-  border-radius: 8px;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.categorylist a:hover {
+  background-color: #a62da271;
+  transform: translateY(-5px);
   cursor: pointer;
-  transition: background-color 0.3s;
-  margin: 0.5rem;
-}
-
-.card:hover {
-  background-color: #d8b0e2;
-}
-
-.card a {
-  text-decoration: none;
-  color: inherit;
-  display: block;
 }
