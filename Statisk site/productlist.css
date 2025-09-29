@@ -5,7 +5,7 @@ main {
 .productContainer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 23px;
   justify-items: center;
   max-width: 1200px;
   margin: 0 auto;
@@ -18,10 +18,13 @@ h1 {
   margin-bottom: 2rem;
 }
 
-.produkter {
+h4 {
+  color: #a5a5a5;
+}
+
+.products {
   position: relative;
   background-color: #292929;
-  color: #fff;
   padding: 10px;
   border-radius: 8px;
   width: 100%;
@@ -30,17 +33,17 @@ h1 {
   cursor: pointer;
 }
 
-.produkter a {
+.products a {
   color: #fff;
 }
 
-.produkter .readmore {
+.products .readmore {
   position: relative;
   color: #ffffff;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
-.produkter.soldout .label {
+.products .soldout .label {
   position: absolute;
   top: 10px;
   left: 10px;
@@ -51,22 +54,25 @@ h1 {
   border-radius: 4px;
 }
 
-.produkter.soldout img {
+.products .soldout img {
   opacity: 0.5;
-  filter: grayscale(80%);
+  filter: grayscale(90%);
 }
 
 .discounted .badge {
   position: absolute;
   top: 10px;
-  right: 10px;
-
+  right: -260px;
   background: red;
   color: #fff;
   font-size: 0.75rem;
   padding: 0.5rem 0.8rem;
   border-radius: 4px;
   font-weight: bold;
+}
+
+.rabat {
+  color: rgb(206, 23, 23);
 }
 
 .discounted p {
