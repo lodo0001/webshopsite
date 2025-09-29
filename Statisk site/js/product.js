@@ -13,14 +13,14 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
     productContainer.innerHTML = `
     <ol class="breadcrumbs">
       <li><a href="index.html">Home</a></li>
-      <li><a href="produktliste.html">Produktliste</a></li>
+      <li><a href="productlist.html">Productlist</a></li>
       <li>${product.productdisplayname}</li>
     </ol>
   
     <div class="productMain">
       <img
         src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp"
-        alt="produktbillede"
+        alt="productbillede"
         class="productbillede"
       />
       <section class="purchaseBox">

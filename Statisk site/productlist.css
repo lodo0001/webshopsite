@@ -2,15 +2,6 @@ main {
   padding: 20px;
 }
 
-.productContainer {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 23px;
-  justify-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 h1 {
   text-align: center;
   font-size: 40px;
@@ -22,6 +13,16 @@ h4 {
   color: #a5a5a5;
 }
 
+.productContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 23px;
+  justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
 .products {
   position: relative;
   background-color: #292929;
@@ -31,56 +32,61 @@ h4 {
   max-width: 290px;
   box-sizing: border-box;
   cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.products a {
-  color: #fff;
+.products:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-.products .readmore {
-  position: relative;
+.products a.readmore {
   color: #ffffff;
   text-decoration: none;
+  display: block;
 }
 
-.products .soldout .label {
+.products .label {
   position: absolute;
   top: 10px;
   left: 10px;
   background: rgba(236, 52, 52, 0.9);
-  color: #000;
+  color: #fff;
   padding: 0.3rem 0.6rem;
   font-weight: bold;
   border-radius: 4px;
+  z-index: 10;
+  font-size: 0.85rem;
 }
 
-.products .soldout img {
+.products.soldout img {
   opacity: 0.5;
   filter: grayscale(90%);
 }
 
 .discounted .badge {
   position: absolute;
-  top: 10px;
-  right: -260px;
+  top: 20px;
+  right: 18px;
   background: red;
   color: #fff;
   font-size: 0.75rem;
   padding: 0.5rem 0.8rem;
   border-radius: 4px;
   font-weight: bold;
+  z-index: 10;
 }
 
 .rabat {
-  color: rgb(206, 23, 23);
-}
-
-.discounted p {
-  display: inline-block;
+  color: rgb(215, 28, 28);
+  font-weight: bold;
 }
 
 .productContainer img {
-  height: 360px;
+  height: 350px;
   width: auto;
   display: block;
+  border-radius: 4px;
+  margin-bottom: 10px;
 }
