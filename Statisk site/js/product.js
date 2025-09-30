@@ -12,8 +12,8 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
 
     productContainer.innerHTML = `
     <ol class="breadcrumbs">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="productlist.html">Productlist</a></li>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="productlist.html">PRODUCTLIST</a></li>
       <li>${product.productdisplayname}</li>
     </ol>
   
@@ -32,9 +32,12 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
   
         <form class="form">
           <label>
-            Choose a size
             <select name="size">
-              ${product.sizefitdesc}
+              <option value="">Select size</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
             </select>
           </label>
           <button>Add to Basket</button>

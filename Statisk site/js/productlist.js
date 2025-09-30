@@ -4,16 +4,38 @@ const params = new URLSearchParams(window.location.search);
 const category = params.get("category");
 document.querySelector("h1").textContent = category;
 
-fetch(`https://kea-alt-del.dk/t7/api/products?limit=48&category=${category}`)
+document
+  .querySelectorAll("#filters button")
+  .forEach((knap) => knap.addEventListener("click", showFiltered));
+
+function showFiltered() {
+  console.log(this.dataset.gender);
+  const gender = this.dataset.gender;
+  if (gender == "All") {
+    showProducts(allData);
+  } else {
+    const udsnit = allData.filter((product) => product.gender == gender);
+    showProducts(udsnit);
+  }
+}
+
+let allData;
+
+fetch(`https://kea-alt-del.dk/t7/api/products?limit=100&category=${category}`)
   .then((response) => response.json())
-  .then((data) => showProducts(data));
+  .then((data) => {
+    allData = data;
+    showProducts(allData);
+  });
 
 function showProducts(products) {
+  console.log(products);
+  productlistContainer.innerHTML = "";
   products.forEach((element) => {
-    productlistContainer.innerHTML += `
-      <article class="products ${element.soldout ? "soldout" : ""} ${
-      element.discount ? "discounted" : ""
-    }">
+    console.log(element);
+    productlistContainer.innerHTML += `<article class="products ${
+      element.soldout ? "soldout" : ""
+    } ${element.discount ? "discounted" : ""}">
         ${element.soldout ? `<div class="label">Udsolgt</div>` : ""}
         <a href="product.html?id=${element.id}" class="readmore">
           <img

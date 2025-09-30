@@ -1,36 +1,80 @@
-h1 {
-  text-align: center;
-  padding-bottom: 2rem;
+/* Reset */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  color: white;
 }
 
+/* Hero baggrund */
+.hero {
+  background: url("img/landing-bg.jpg") no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+header nav a {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero content */
+.hero-content {
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+}
+
+/* Categories nederst */
 .categorylist {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: center;
-  gap: 5rem;
-  margin: 2rem auto;
-  max-width: 1200px;
-  padding: 0 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .categorylist a {
-  background-color: #9a3a8892;
+  background-color: #d66dc3;
   color: #ffffff;
-  padding: 3rem 2rem;
+  padding: 1.5rem;
   border-radius: 12px;
   text-decoration: none;
   font-weight: bold;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 20px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .categorylist a:hover {
-  background-color: #a62da271;
+  background-color: #d35bcf;
   transform: translateY(-5px);
   cursor: pointer;
 }

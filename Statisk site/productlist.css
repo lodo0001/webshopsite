@@ -49,11 +49,11 @@ h4 {
 
 .products .label {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 19px;
+  left: 16px;
   background: rgba(236, 52, 52, 0.9);
   color: #fff;
-  padding: 0.3rem 0.6rem;
+  padding: 0.5rem 0.8rem;
   font-weight: bold;
   border-radius: 4px;
   z-index: 10;
@@ -89,4 +89,26 @@ h4 {
   display: block;
   border-radius: 4px;
   margin-bottom: 10px;
+}
+
+#filters {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  margin: 20px 0;
+  margin-left: 4.8rem;
+}
+
+#filters button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #d86db4;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#filters button:hover {
+  background-color: #6d385e;
 }
