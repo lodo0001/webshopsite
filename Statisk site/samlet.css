@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #d0d0d0;
+  background: #b94a48;
 }
 
 main {
@@ -25,10 +25,11 @@ header {
 nav a {
   margin-left: 14px;
   text-decoration: none;
-  color: black;
+  color: #522929;
   font-size: 20px;
+  font-weight: bolder;
 }
 
 nav a:hover {
-  color: rgb(173, 123, 148);
+  color: #f2ec9b;
 }

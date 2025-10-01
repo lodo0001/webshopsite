@@ -7,6 +7,7 @@ h1 {
   font-size: 40px;
   margin-top: 3rem;
   margin-bottom: 2rem;
+  color: #f2dea0;
 }
 
 h4 {
@@ -25,7 +26,7 @@ h4 {
 
 .products {
   position: relative;
-  background-color: #292929;
+  background-color: #522929;
   padding: 10px;
   border-radius: 8px;
   width: 100%;
@@ -62,14 +63,14 @@ h4 {
 
 .products.soldout img {
   opacity: 0.5;
-  filter: grayscale(90%);
+  filter: grayscale(70%);
 }
 
 .discounted .badge {
   position: absolute;
   top: 20px;
   right: 18px;
-  background: red;
+  background: rgb(185, 44, 44);
   color: #fff;
   font-size: 0.75rem;
   padding: 0.5rem 0.8rem;
@@ -79,7 +80,7 @@ h4 {
 }
 
 .rabat {
-  color: rgb(215, 28, 28);
+  color: rgb(234, 59, 59);
   font-weight: bold;
 }
 
@@ -103,12 +104,12 @@ h4 {
   padding: 8px 16px;
   border: none;
   border-radius: 8px;
-  background-color: #d86db4;
-  color: rgb(255, 255, 255);
+  background-color: #f2dea0;
+  color: #a63838;
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
 
 #filters button:hover {
-  background-color: #6d385e;
+  background-color: #bf7f5a;
 }
