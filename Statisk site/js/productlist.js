@@ -4,11 +4,30 @@ const params = new URLSearchParams(window.location.search);
 const category = params.get("category");
 document.querySelector("h1").textContent = category;
 
-document
-  .querySelectorAll("#filters button")
-  .forEach((knap) => knap.addEventListener("click", showFiltered));
+// document
+//   .querySelectorAll("#filters button")
+//   .forEach((knap) => knap.addEventListener("click", showFiltered));
 
-function showFiltered() {
+document.querySelector("filters").addEventListener("click", showFiltered);
+document.querySelector("sorting").addEventListener("click", showSorted);
+
+function showSorted(event) {
+  const direction = event.target.dataset.direction;
+  console.log(direction);
+  if (direction == "lohi") {
+    currentDataset.sort(
+      (firstItem, secondItem) => firstItem.price - secondItem.price
+    );
+  } else {
+    currentDataset.sort(
+      (firstItem, secondItem) => secondItem.price - firstItem.price
+    );
+  }
+  showProducts(currentDataset);
+}
+
+function showFiltered(event) {
+  // console.log(event.target);
   console.log(this.dataset.gender);
   const gender = this.dataset.gender;
   if (gender == "All") {
