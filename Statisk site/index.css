@@ -5,7 +5,7 @@ html {
   padding: 0;
   height: 100%;
   font-family: Arial, sans-serif;
-  color: white;
+  color: #f2dea0;
 }
 
 /* Hero baggrund */
@@ -27,13 +27,10 @@ header {
 
 header nav a {
   margin-left: 20px;
-  color: white;
+  color: #522929;
   text-decoration: none;
-  font-weight: 500;
-}
-
-header nav a:hover {
-  text-decoration: underline;
+  font-size: 20px;
+  font-weight: bolder;
 }
 
 /* Hero content */
@@ -58,12 +55,12 @@ header nav a:hover {
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 1.5rem;
   padding: 2rem;
-  background: rgba(255, 255, 255, 0.5);
+  background: #a63838;
 }
 
 .categorylist a {
-  background-color: #d66dc3;
-  color: #ffffff;
+  background-color: #f2dea0;
+  color: #a63838;
   padding: 1.5rem;
   border-radius: 12px;
   text-decoration: none;
@@ -74,7 +71,7 @@ header nav a:hover {
 }
 
 .categorylist a:hover {
-  background-color: #d35bcf;
+  background-color: #bf7f5a;
   transform: translateY(-5px);
   cursor: pointer;
 }

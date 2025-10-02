@@ -14,7 +14,7 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
     <ol class="breadcrumbs">
       <li><a href="index.html">HOME</a></li>
       <li><a href="productlist.html">PRODUCTLIST</a></li>
-      <li>${product.productdisplayname}</li>
+    <li style="color:#F2DEA0;">${product.productdisplayname}</li>
     </ol>
   
     <div class="productMain">
@@ -24,11 +24,12 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
         class="productbillede"
       />
       <section class="purchaseBox">
-        <h3>${product.productdisplayname}</h3>
-        <br/>
-        <h4>Price: <span>DKK ${product.price},-</span></h4>
-        <p>Color: <span>${product.basecolour}</span></p>
-        <p>Gender: <span>${product.gender}</span></p>
+    <h3 style="color:#F2DEA0;">${product.productdisplayname}</h3>
+<br/>
+<h4 style="color:#F2DEA0;">Price: <span>DKK ${product.price},-</span></h4>
+<p style="color:#F2DEA0;">Color: <span>${product.basecolour}</span></p>
+<p style="color:#F2DEA0;">Gender: <span>${product.gender}</span></p>
+
   
         <form class="form">
           <label>
