@@ -1,19 +1,19 @@
 const productlistContainer = document.querySelector(".productContainer");
+let allData, currentDataset;
 
 const params = new URLSearchParams(window.location.search);
 const category = params.get("category");
 document.querySelector("h1").textContent = category;
 
-// document
-//   .querySelectorAll("#filters button")
-//   .forEach((knap) => knap.addEventListener("click", showFiltered));
-
-document.querySelector("filters").addEventListener("click", showFiltered);
-document.querySelector("sorting").addEventListener("click", showSorted);
+document.querySelector("#filters").addEventListener("click", showFiltered);
+document.querySelector("#sorting").addEventListener("click", showSorted);
 
 function showSorted(event) {
   const direction = event.target.dataset.direction;
   console.log(direction);
+
+  if (!direction) return; // hvis man klikker udenfor en knap
+
   if (direction == "lohi") {
     currentDataset.sort(
       (firstItem, secondItem) => firstItem.price - secondItem.price
@@ -27,23 +27,46 @@ function showSorted(event) {
 }
 
 function showFiltered(event) {
-  // console.log(event.target);
-  console.log(this.dataset.gender);
-  const gender = this.dataset.gender;
+  const gender = event.target.dataset.gender;
+  if (!gender) return; // hvis man klikker udenfor en knap
+
   if (gender == "All") {
-    showProducts(allData);
+    currentDataset = allData;
   } else {
-    const udsnit = allData.filter((product) => product.gender == gender);
-    showProducts(udsnit);
+    currentDataset = allData.filter((product) => product.gender == gender);
   }
+  showProducts(currentDataset);
 }
 
-let allData;
+const myRange = document.querySelector("#myRange");
+const maxDisp = document.querySelector("#max");
+const minDisp = document.querySelector("#min");
+
+myRange.addEventListener("input", (event) => {
+  maxDisp.textContent = event.target.value;
+  filterByPrice(event.target.value);
+});
+
+function filterByPrice(maxPrice) {
+  const udsnit = allData.filter((product) => product.price <= maxPrice);
+  currentDataset = udsnit;
+  showProducts(currentDataset);
+}
+
+function highestPrice(arr) {
+  arr.sort((firstItem, secondItem) => firstItem.price - secondItem.price);
+  const highest = arr[arr.length - 1].price;
+  myRange.max = highest;
+  maxDisp.textContent = highest;
+  myRange.min = arr[0].price;
+  minDisp.textContent = arr[0].price;
+}
 
 fetch(`https://kea-alt-del.dk/t7/api/products?limit=100&category=${category}`)
   .then((response) => response.json())
   .then((data) => {
     allData = data;
+    currentDataset = allData;
     showProducts(allData);
   });
 

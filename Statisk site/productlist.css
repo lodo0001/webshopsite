@@ -92,15 +92,24 @@ h4 {
   margin-bottom: 10px;
 }
 
-#filters {
+/* css til knapper */
+.knapper {
   display: flex;
-  gap: 10px;
-  justify-content: flex-start;
-  margin: 20px 0;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 3rem;
   margin-left: 4.8rem;
+  margin-top: 7rem;
 }
 
-#filters button {
+#filters,
+#sorting {
+  display: flex;
+  gap: 10px;
+}
+
+#filters button,
+#sorting button {
   padding: 8px 16px;
   border: none;
   border-radius: 8px;
@@ -110,6 +119,51 @@ h4 {
   transition: background-color 0.2s ease;
 }
 
-#filters button:hover {
+#filters button:hover,
+#sorting button:hover {
   background-color: #bf7f5a;
+}
+
+.separator {
+  margin: 0 15px;
+  font-size: 18px;
+  color: #a63838;
+  font-weight: bold;
+}
+
+/* css til range */
+.range {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 4.8rem;
+  margin-bottom: 2rem;
+  color: #f2dea0;
+  font-weight: bold;
+}
+
+.range input[type="range"] {
+  -webkit-appearance: none;
+  width: 200px;
+  height: 6px;
+  background: #f2dea0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.range input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #a63838;
+  cursor: pointer;
+}
+
+.range input[type="range"]::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #a63838;
+  cursor: pointer;
 }

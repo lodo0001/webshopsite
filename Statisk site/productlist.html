@@ -27,18 +27,27 @@
 
     <main>
       <h1></h1>
-      <section id="filters">
-        <button data-gender="All">All</button>
-        <button data-gender="Unisex">Unisex</button>
-        <button data-gender="Men">Men</button>
-        <button data-gender="Women">Women</button>
-      </section>
-      <br />
+      <div class="knapper">
+        <section id="filters">
+          <button data-gender="All">All</button>
+          <button data-gender="Unisex">Unisex</button>
+          <button data-gender="Men">Men</button>
+          <button data-gender="Women">Women</button>
+        </section>
 
-      <section id="sorting">
-        <button data-direction="lohi">Pris lav til høj</button>
-        <button data-direction="hilo">Pris høj til lav</button>
-      </section>
+        <span class="separator">-</span>
+
+        <section id="sorting">
+          <button data-direction="lohi">Pris lav til høj</button>
+          <button data-direction="hilo">Pris høj til lav</button>
+        </section>
+      </div>
+
+      <div class="range">
+        <span id="min">1</span
+        ><input type="range" min="1" max="10000" value="10000" id="myRange" />
+        <span id="max">10000</span> kr.
+      </div>
 
       <section class="productContainer"></section>
     </main>

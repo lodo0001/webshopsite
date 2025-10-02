@@ -12,8 +12,12 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
 
     productContainer.innerHTML = `
     <ol class="breadcrumbs">
-      <li><a href="index.html">HOME</a></li>
-      <li><a href="productlist.html">PRODUCTLIST</a></li>
+      <li><a href="index.html">Home</a></li>
+         <li><a href="categories.html">Categories</a></li>
+      <li><a href="productlist.html?category=${product.category}">Productlist</a></li>
+
+
+
     <li style="color:#F2DEA0;">${product.productdisplayname}</li>
     </ol>
   
